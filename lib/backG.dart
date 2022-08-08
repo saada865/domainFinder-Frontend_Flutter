@@ -1,7 +1,12 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:frontend/apiCaller.dart';
+import 'package:frontend/browser.dart';
+import 'package:frontend/launcher.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'launcher_final.dart';
 //saada865/Domain-Finder
 
 class backG extends StatefulWidget {
@@ -18,6 +23,9 @@ class _backGState extends State<backG> {
       color: Colors.deepPurpleAccent[100],
       child: Column(
         children: [
+          //SizedBox(height: 200),
+          //scraperFinal(),
+          //Browser(),
           Padding(
             padding: const EdgeInsets.fromLTRB(0.0, 0.0, 280.0, 0.0),
             child: Container(
@@ -33,12 +41,6 @@ class _backGState extends State<backG> {
             ),
           ),
           Icon(
-            //Icons.add_moderator_sharp,
-            //Icons.add_task,
-            //Icons.add_to_home_screen,
-            //Icons.wysiwyg_rounded,
-            //Icons.workspace_premium_sharp,
-            //Icons.wrong_location_outlined,
             Icons.zoom_in_rounded,
             size: 125,
           ),
@@ -67,25 +69,26 @@ class _backGState extends State<backG> {
                 )),
           ),
           SizedBox(
-            height: 100,
+            height: 50,
           ),
-          Container(
-              height: 70,
-              width: 220,
-              decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  borderRadius: BorderRadius.circular(10)),
-              child: TextButton(
-                onPressed: () {},
-                child: Text(
-                  "Press to get Domain Name",
-                  style: TextStyle(
-                    color: Colors.purple[300],
-                    fontSize: 15,
-                    //backgroundColor: Colors.purple
-                  ),
-                ),
-              ))
+          ApiService(),
+          // Container(
+          //     height: 70,
+          //     width: 220,
+          //     decoration: BoxDecoration(
+          //         color: Colors.grey[200],
+          //         borderRadius: BorderRadius.circular(10)),
+          //     child: TextButton(
+          //       onPressed: () {},
+          //       child: Text(
+          //         "Press to get Domain Name",
+          //         style: TextStyle(
+          //           color: Colors.purple[300],
+          //           fontSize: 15,
+          //           //backgroundColor: Colors.purple
+          //         ),
+          //       ),
+          //     ))
         ],
       ),
     );
