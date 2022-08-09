@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
 
@@ -81,15 +82,34 @@ class _ApiServiceState extends State<ApiService> {
       child: Column(
         children: [
           Container(
+            height: 45,
+            width: 200,
+            decoration: BoxDecoration(
+              color: Color.fromARGB(255, 150, 85, 181),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: TextField(
+              controller: myCont,
+              decoration: InputDecoration(border: InputBorder.none),
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Container(
             height: 40,
-            width: 150,
+            width: 200,
             child: ElevatedButton(
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
                       Color.fromARGB(255, 150, 85, 181)),
                   foregroundColor:
                       MaterialStateProperty.all<Color>(Colors.black)),
-              child: Text("GET DOMAIN"),
+              child: Text(
+                "GET DOMAIN",
+                style: GoogleFonts.bebasNeue(
+                    fontStyle: FontStyle.normal, fontSize: 25),
+              ),
               onPressed: () {
                 fetchNotes();
                 //// print(dope);
@@ -97,25 +117,6 @@ class _ApiServiceState extends State<ApiService> {
               },
             ),
           ),
-          SizedBox(
-            height: 10,
-          ),
-          // ignore: prefer_const_constructors
-          // ElevatedButton(
-          //   onPressed: method,
-          //   child: Text("For webpage"),
-          // ),
-          Container(
-            height: 50,
-            width: 200,
-            decoration: BoxDecoration(color: Color.fromARGB(255, 150, 85, 181)),
-            child: Padding(
-              padding: const EdgeInsets.all(4.0),
-              child: TextField(
-                controller: myCont,
-              ),
-            ),
-          )
         ],
       ),
     ));
