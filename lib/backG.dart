@@ -1,13 +1,7 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:frontend/apiCaller.dart';
-import 'package:frontend/browser.dart';
-import 'package:frontend/launcher.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import 'launcher_final.dart';
-//saada865/Domain-Finder
 
 class backG extends StatefulWidget {
   const backG({Key? key}) : super(key: key);
@@ -24,9 +18,6 @@ class _backGState extends State<backG> {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            //SizedBox(height: 200),
-            //scraperFinal(),
-            //Browser(),
             Padding(
               padding: const EdgeInsets.fromLTRB(0.0, 0.0, 280.0, 0.0),
               child: Container(
@@ -37,7 +28,6 @@ class _backGState extends State<backG> {
                   image: DecorationImage(
                     image: AssetImage("assets/main_top.png"),
                   ),
-                  //   color: Colors.green,
                 ),
               ),
             ),
@@ -50,43 +40,16 @@ class _backGState extends State<backG> {
               shadowColor: Colors.transparent,
               child: Padding(
                   padding: const EdgeInsets.fromLTRB(75.0, 10, 20, 0),
-                  child:
-                      // Card(
-                      //color: Color.fromARGB(255, 60, 17, 82),
-                      // child:
-                      Text(
+                  child: Text(
                     "Welcome To Domain Finder!",
-                    //style: //TextStyle(
-                    //color: Color.fromARGB(255, 140, 14, 203),
                     style: GoogleFonts.bebasNeue(
                         fontStyle: FontStyle.normal, fontSize: 50),
-
-                    //fontSize: 38,
-                    // ),
-                    //),
                   )),
             ),
             SizedBox(
               height: 50,
             ),
             ApiService(),
-            // Container(
-            //     height: 70,
-            //     width: 220,
-            //     decoration: BoxDecoration(
-            //         color: Colors.grey[200],
-            //         borderRadius: BorderRadius.circular(10)),
-            //     child: TextButton(
-            //       onPressed: () {},
-            //       child: Text(
-            //         "Press to get Domain Name",
-            //         style: TextStyle(
-            //           color: Colors.purple[300],
-            //           fontSize: 15,
-            //           //backgroundColor: Colors.purple
-            //         ),
-            //       ),
-            //     ))
           ],
         ),
       ),

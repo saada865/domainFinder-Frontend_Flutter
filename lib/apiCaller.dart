@@ -56,22 +56,10 @@ class _ApiServiceState extends State<ApiService> {
       Name newName = Name.fromMap(nameMap);
       names.add(newName);
       justNames.add(newName.name.toString());
-      // print(newName.name.toString());
     }
     var element = getrandomElement(justNames);
     key = element;
     method();
-    //return element;
-    //print(decoded.toString());
-
-    // List<Name> names = [];
-    // for (var name in decoded) {
-    //   print(name.toString());
-    // }
-
-    // Name names = decoded;
-    // print(names.name.toString());
-    //return names;
   }
 
   @override
@@ -112,8 +100,6 @@ class _ApiServiceState extends State<ApiService> {
               ),
               onPressed: () {
                 fetchNotes();
-                //// print(dope);
-                //print(element.toString());
               },
             ),
           ),
@@ -122,12 +108,3 @@ class _ApiServiceState extends State<ApiService> {
     ));
   }
 }
-
-// static String _baseUrl = 'https://young-sea-46186.herokuapp.com/';
-
-//   static Future<void> get() async {
-//     Uri requestUri = Uri.parse(_baseUrl + "/names/list");
-//     var response = await http.post(requestUri);
-//     var decoded = jsonDecode(response.body);
-//     print("ANSWER");
-//     print(decoded.toString());
